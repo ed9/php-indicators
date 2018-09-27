@@ -19,6 +19,7 @@ class Loading
     {
         $this->total = $totalRows;
         $this->barLength = $barLength;
+        $this->autoIncrement = $autoIncrement;
     }
 
     /**
