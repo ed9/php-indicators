@@ -1,5 +1,5 @@
 {
-  "name": "ed/php-indicators",
+  "name": "ed9/php-indicators",
   "description": "PHP Indicators for command line interface (CLI)",
   "type": "library",
   "license": "MIT",
