@@ -1,0 +1,23 @@
+{
+  "name": "ed/php-indicators",
+  "description": "PHP Indicators for command line interface (CLI)",
+  "type": "library",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Edward",
+      "email": "mail@edgarskohs.com"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "Edward\\Indicator\\": "src/"
+    }
+  },
+  "require": {
+    "php": "^7.0"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "^7.3"
+  }
+}
