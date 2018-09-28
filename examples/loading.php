@@ -3,7 +3,7 @@ ob_start();
 include dirname(__FILE__) . '/../vendor/autoload.php';
 
 /*
- * Initiate new loading instance by overwriting the bar length, total row count and auto step increment straight
+ * Initiate new loading instance by overwriting the total row count, the bar length and auto step increment straight
  * from the constructor.
  */
 $loading = new \Edward\Indicator\Loading(100, 30, true);
