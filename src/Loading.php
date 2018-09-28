@@ -139,7 +139,7 @@ class Loading
         $percentage = $this->current && $this->total ? (double)($this->current / $this->total) : 0;
         $bar = floor($percentage * $this->barLength);
 
-        $output = str_repeat('=', $bar);
+        $output = '[' . str_repeat('=', $bar);
 
         if ($bar < $this->barLength) {
             $output .= ">";
@@ -150,7 +150,7 @@ class Loading
 
         $percentageView = number_format($percentage * 100, 2, '.', '');
 
-        $output .= "] $percentageView%  $this->current/$this->total";
+        $output .= '] ' . $percentageView . '%  ' . $this->current . '/' . $this->total;
 
         @$rate = ($now - $this->startTimer) / $this->current;
         $left = $this->total - $this->current;
@@ -183,7 +183,7 @@ class Loading
         $eta = round($eta, 2);
         $elapsed = round($elapsed, 2);
 
-        $output .= ' remaining: ' . number_format($eta) . ' ' . $etaFormat . '.  elapsed: ' . number_format($elapsed) . ' ' . $elapsedFormat . '.';
+        $output .= ' remaining: ' . number_format($eta) . ' ' . $etaFormat . ', elapsed: ' . number_format($elapsed) . ' ' . $elapsedFormat . '.';
 
         if ($callback !== null) {
             return $callback([
